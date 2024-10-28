@@ -1,0 +1,138 @@
+:root {
+  --clr-dark-cyan: hsl(158, 36%, 37%);
+  --clr-cream: hsl(30, 38%, 92%);
+  --clr-very-dark-cyan: hsl(158, 50%, 14%);
+  --clr-dark-gray-blue: hsl(228, 12%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+  --ff-fr: "Fraunces", serif;
+  --ff-mo: "Montserrat", serif;
+  --fs-14: 0.875rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-cream);
+  padding: 20px;
+}
+
+.desktop-image {
+  width: 100%;
+  display: none;
+}
+
+.mobile-image {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+}
+
+.container {
+  border-radius: 15px;
+  background-color: var(--clr-white);
+  min-width: 18.75rem;
+}
+
+.text-container,
+button {
+  font-family: var(--ff-mo);
+}
+
+.text-container {
+  padding: 25px 15px;
+}
+
+h1,
+h2 {
+  font-family: var(--ff-fr);
+}
+
+p {
+  color: var(--clr-dark-gray-blue);
+  font-size: var(--fs-14);
+}
+
+.text-container p:first-of-type {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.7rem;
+}
+
+h1 {
+  margin-bottom: 13px;
+  font-size: 1.8rem;
+}
+
+.text-container p:nth-of-type(2) {
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+h2 {
+  color: var(--clr-dark-cyan);
+  display: inline;
+}
+
+.text-container p:last-of-type {
+  display: inline;
+  margin-left: 15px;
+  text-decoration: line-through;
+}
+
+button {
+  display: block;
+  width: 100%;
+  background-color: var(--clr-dark-cyan);
+  color: var(--clr-white);
+  margin-top: 20px;
+  padding: 14px 11px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-out 0ms;
+  &:hover {
+    background-color: var(--clr-very-dark-cyan);
+  }
+}
+
+.attribution {
+  font-size: 0.68rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (width >= 48rem) {
+  .desktop-image {
+    display: block;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  .mobile-image {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 35rem;
+  }
+}
